@@ -1,0 +1,202 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="29475a97-e01c-4e46-8b8c-7c2c3f061197" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Accident</ID>
+  <Name>Fact Accident</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="cebb3f3a-7eb4-41ed-b652-022ec4a4b4e2">
+    <DataSourceViewID>Projet3</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="08b811ce-0a13-433d-88a4-28ea5ecb312b">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="fb1f44aa-d72e-46e1-8740-b809442c1d95">
+      <ID>Accident Index</ID>
+      <Name>Accident Index</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6637d8a3-f8b3-4714-9110-bd4e42f0ce98">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1a4c55ae-a706-414f-9ef7-ab376cc0e43b">
+            <TableID>dbo_FactAccident</TableID>
+            <ColumnID>Accident_Index</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="e52c1196-3f61-4150-a9c8-1911e600e03f">
+          <AttributeID>Code Condition</AttributeID>
+          <Name>Code Condition</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4318ad1c-a40c-44eb-9a95-a57da1f06756">
+          <AttributeID>Code Police</AttributeID>
+          <Name>Code Police</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="448d9247-7a1a-40b1-b1cf-cca784c2ff93">
+          <AttributeID>Code Road</AttributeID>
+          <Name>Code Road</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="208cab1c-bafc-4b72-b490-150297f93c6d">
+          <AttributeID>Code Severity</AttributeID>
+          <Name>Code Severity</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="292362f8-8b0e-41b8-8c12-9aeb9122c9a3">
+          <AttributeID>Code Location</AttributeID>
+          <Name>Code Location</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2926c7c7-d364-4377-9e19-07ffc5d8e037">
+          <AttributeID>Date Key</AttributeID>
+          <Name>Date Key</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a0c523d7-4e80-47fd-acdd-0a07444cfae0">
+      <ID>Code Condition</ID>
+      <Name>Code Condition</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0ecb2e7d-95d5-426a-909d-f7a136e9f252">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="af15c57f-cb71-4fb6-9576-2f89f888ede3">
+            <TableID>dbo_FactAccident</TableID>
+            <ColumnID>code_condition</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6e5f396e-9534-4a92-90e0-d451c5427195">
+      <ID>Code Police</ID>
+      <Name>Code Police</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="48b13421-37d1-40bc-b0ed-1aa45a37662f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e709d061-0b66-489c-bcca-303e500bef70">
+            <TableID>dbo_FactAccident</TableID>
+            <ColumnID>code_police</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4f06ce55-072c-4149-b636-64c92a3ad168">
+      <ID>Code Road</ID>
+      <Name>Code Road</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="64309a2d-4c23-41d6-b9c6-f7c9d0a3f8e1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f2913500-ca2f-41ac-b25e-98675059d346">
+            <TableID>dbo_FactAccident</TableID>
+            <ColumnID>code_road</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4f79be78-569c-4017-8a45-d5794a62d58f">
+      <ID>Code Severity</ID>
+      <Name>Code Severity</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d4fe1820-65c3-4fc1-91c8-1f35962d7600">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="db2aedf6-28ad-4c7d-839b-87ee37d991fb">
+            <TableID>dbo_FactAccident</TableID>
+            <ColumnID>code_severity</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6ad98d68-0989-46d8-bcf4-49747ba9e53f">
+      <ID>Code Location</ID>
+      <Name>Code Location</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="041783d8-37fe-4be8-bdfc-f3138b7f959a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="deed7128-d6a5-45d1-bdd7-2e6ee1d0f249">
+            <TableID>dbo_FactAccident</TableID>
+            <ColumnID>code_location</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4fee6610-42be-4c54-97be-73c747cdc486">
+      <ID>Date Key</ID>
+      <Name>Date Key</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9ba4459f-3e90-4468-8378-e243a360323c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="66b37ecc-0499-489d-8989-878f0568af7b">
+            <TableID>dbo_FactAccident</TableID>
+            <ColumnID>DateKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

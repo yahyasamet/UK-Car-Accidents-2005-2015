@@ -1,0 +1,122 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Profile {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Let's predict the seveity of an accident !</h5>
+                                        </div>
+                                        <form action="" method="post">
+                                            {% csrf_token %}
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-sm-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="fn">Number of vehicules</label>
+                                                        <input type="number" class="form-control" id="fn"  placeholder="Number of vehicules" name="number_of_vehicules">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Light Condition</label>
+                                                        <select class="form-control" id="exampleFormControlSelect1" name="light_condition">
+                                                            <option value=2>Darkness: Street lights present and lit</option>
+                                                            <option value=0>Darkeness: No street lighting</option>
+                                                            <option value=1>Darkness: Street lighting unknown</option>
+                                                            <option value=4>Daylight: Street light present</option>
+                                                            <option value=3>Darkness: Street lights present but unlit</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Weather Condition</label>
+                                                        <select class="form-control" id="exampleFormControlSelect1" name="weather_condition">
+                                                            <option value=3>Fog or mist</option>
+                                                            <option value=7>Snowing with high winds</option>
+                                                            <option value=5>Raining with high winds</option>
+                                                            <option value=8>Snowing without high winds</option>
+                                                            <option value=2>Fine without high winds</option>
+                                                            <option value=1>Fine with high winds</option>
+                                                            <option value=6>Raining without high winds</option>
+                                                            <option value=4>Other</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Road Surface Condition</label>
+                                                        <select class="form-control" id="exampleFormControlSelect1" name="Road_Surface_Condition">
+                                                            <option value=1>Dry</option>
+                                                            <option value=5>Wet/Damp</option>
+                                                            <option value=4>Snow</option>
+                                                            <option value=3>Frost/Ice</option>
+                                                            <option value=2>Flood (Over 3cm of water)</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 mb-4">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Special Conditions at Site</label>
+                                                        <select class="form-control" id="exampleFormControlSelect1" name="Special_Conditions_at_Site">
+                                                            <option value=1>Auto traffic singal out</option>
+                                                            <option value=2>Permanent sign or marking defective or obscured</option>
+                                                            <option value=7>Road surface defective</option>
+                                                            <option value=5>Ol or diesel</option>
+                                                            <option value=2>Auto traffic signal partly defective</option>
+                                                            <option value=3>Mud</option>
+                                                            <option value=8>Roadworks</option>
+                                                            <option value=4>None</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 mb-4">
+                                                    <div class="form-group">
+                                                        <input type="submit" class="btn btn-primary" value="Predict">
+                                                    </div>
+                                                </div>   
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="card-header">
+                                        {% if result %}
+                                        <h5>The severity is: {{result}}  </h5>
+                                        {% endif %}
+                                       </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
+

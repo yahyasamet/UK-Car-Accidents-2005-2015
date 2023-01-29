@@ -1,0 +1,103 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>MultidimensionalFinale</Database>
+    <Server>localhost</Server>
+    <ConnectionString>DataSource=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>jjMM/LjvekF+D+VfmuZqgqJUWGs=24/10/2022 10:26:3524/10/2022 10:26:35</TimeStamp>
+        <ID>
+          <String>Projet3</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>joJSPWz0Fo7F4H7srhJm/h0YXxY=24/10/2022 10:27:1624/10/2022 10:27:16</TimeStamp>
+        <ID>
+          <String>Projet3</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EsKVBiI69N/WDhWd5RVKbmox+IA=24/10/2022 10:27:5524/10/2022 10:27:55</TimeStamp>
+        <ID>
+          <String>Dim Conditions</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>7zTO8306wB4xgglMY4eFOBP53N8=24/10/2022 10:27:5524/10/2022 10:27:55</TimeStamp>
+        <ID>
+          <String>Dim Police</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>FrPSdpDDrTfZb3e3kTnmm3Akr0c=24/10/2022 10:27:5524/10/2022 10:27:55</TimeStamp>
+        <ID>
+          <String>Dim Road</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>4N0YNLVvDf9sNZ6tUEq4PEGvEi8=24/10/2022 10:27:5524/10/2022 10:27:55</TimeStamp>
+        <ID>
+          <String>Dim Type Accident Severity</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Fpi/G2EjG3k8/nzv7qKuPWf2W48=24/10/2022 10:27:5524/10/2022 10:27:55</TimeStamp>
+        <ID>
+          <String>Dim Location</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Qtz4j8gD8HUBmQmCH+miA0vq31E=24/10/2022 10:27:5524/10/2022 10:27:55</TimeStamp>
+        <ID>
+          <String>Dim Timspan</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>2bgQFgZei1Y7Q1Pokuel7Pnl6fo=24/10/2022 10:27:5524/10/2022 10:27:55</TimeStamp>
+        <ID>
+          <String>Fact Accident</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>9jmAi2WudFwslKieynYqI3IJ6vk=24/10/2022 10:27:5524/10/2022 10:27:55B6fWyNlz2YOgq1G1q/Tix60Bp6o=24/10/2022 10:27:5524/10/2022 10:27:55</TimeStamp>
+        <ID>
+          <String>Projet3</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>+OLkane8DdMveMN5LQcqhEiqKQ8=24/10/2022 10:23:4124/10/2022 10:23:41</TimeStamp>
+      <ID>
+        <String>MultidimensionalFinale</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2022-10-24T09:28:03.296667Z</LastDeployed>
+</DeploymentSnapshot>

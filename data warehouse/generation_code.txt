@@ -1,0 +1,16 @@
+;with  Road as (SELECT  *,DENSE_RANK() OVER (ORDER BY concat(Road_Type,Speed_limit) ASC) as RN  FROM [Projet3SA].[dbo].[OLE DB Destination])
+UPDATE [Projet3SA].[dbo].[OLE DB Destination] SET [code_road]=RN from Road C join [Projet3SA].[dbo].[OLE DB Destination] T on T.Road_Type=c.Road_Type and T.Speed_limit=c.Speed_limit
+
+;with  Conditions as (SELECT  *,DENSE_RANK() OVER (ORDER BY concat(concat(concat(concat(Light_Conditions,Weather_Conditions),Weather_Conditions),Road_Surface_Conditions),Special_Conditions_at_Site) ASC) as RN  FROM [Projet3SA].[dbo].[OLE DB Destination])
+UPDATE [Projet3SA].[dbo].[OLE DB Destination] SET [code_condition]=RN from Conditions C join [Projet3SA].[dbo].[OLE DB Destination] T on T.Light_Conditions=c.Light_Conditions and T.Weather_Conditions=c.Weather_Conditions and T.Road_Surface_Conditions=c.Road_Surface_Conditions and T.Special_Conditions_at_Site=c.Special_Conditions_at_Site 
+
+;with  Location as (SELECT  *,DENSE_RANK() OVER (ORDER BY concat(concat(concat(concat(concat(Location_Easting_OSGR,Location_Northing_OSGR),Longitude),Latitude),Urban_or_Rural_Area),LSOA_of_Accident_Location) ASC) as RN  FROM [Projet3SA].[dbo].[OLE DB Destination])
+UPDATE [Projet3SA].[dbo].[OLE DB Destination] SET [code_location]=RN from Location C join [Projet3SA].[dbo].[OLE DB Destination] T on T.Location_Easting_OSGR=c.Location_Easting_OSGR and T.Location_Northing_OSGR=c.Location_Northing_OSGR and T.Longitude=c.Longitude and T.Latitude=c.Latitude  and T.Urban_or_Rural_Area=c.Urban_or_Rural_Area  and T.LSOA_of_Accident_Location=c.LSOA_of_Accident_Location  
+
+;with  Severity as (SELECT  *,DENSE_RANK() OVER (ORDER BY Accident_Severity ASC) as RN  FROM [Projet3SA].[dbo].[OLE DB Destination])
+UPDATE [Projet3SA].[dbo].[OLE DB Destination] SET [code_severity]=RN from Severity C join [Projet3SA].[dbo].[OLE DB Destination] T on T.Accident_Severity=c.Accident_Severity 
+
+;with  Police as (SELECT  distinct Police_Force, Local_Authority_Highway,Local_Authority_District,DENSE_RANK() OVER (ORDER BY Police_Force+Local_Authority_District+Local_Authority_Highway ASC) as RN  FROM [Projet3SA].[dbo].[OLE DB Destination])
+UPDATE [Projet3SA].[dbo].[OLE DB Destination] SET [code_police]=RN from Police C join [Projet3SA].[dbo].[OLE DB Destination] T on T.Police_Force=c.Police_Force  and T.Local_Authority_Highway=c.Local_Authority_Highway and T.Local_Authority_District=c.Local_Authority_District
+
+
